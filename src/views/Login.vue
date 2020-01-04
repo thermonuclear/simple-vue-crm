@@ -1,5 +1,5 @@
 <template>
-  <form class="card auth-card" @submit.prevent="formLogin">
+  <form class="card auth-card" @submit.prevent="formSubmit">
     <div class="card-content">
       <span class="card-title">Домашняя бухгалтерия</span>
       <div class="input-field">
@@ -38,7 +38,7 @@
 
       <p class="center">
         Нет аккаунта?
-        <a href="/">Зарегистрироваться</a>
+        <router-link to="/registr">Зарегистрироваться</router-link>
       </p>
     </div>
   </form>
@@ -46,6 +46,8 @@
 
 <script>
   import {email, required, minLength} from 'vuelidate/lib/validators'
+  import messages from '../utils/messages'
+
   export default {
     name: 'Login',
     data: () => ({
@@ -54,10 +56,15 @@
     }),
     validations: {
       email: {email, required},
-      password: {required, minLength: minLength(7)}
+      password: {required, minLength: minLength(6)}
+    },
+    mounted () {
+      if (messages[this.$route.query.message]) {
+        this.$message(messages[this.$route.query.message])
+      }
     },
     methods: {
-      formLogin() {
+      formSubmit() {
         if (this.$v.$invalid) {
           this.$v.$touch()
           return
