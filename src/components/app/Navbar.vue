@@ -16,7 +16,7 @@
             data-target="dropdown"
             ref="dropdown"
           >
-            USER NAME
+            {{name}}
             <i class="material-icons right">arrow_drop_down</i>
           </a>
 
@@ -47,6 +47,11 @@
       intervalId: null,
       dropdown: null,
     }),
+    computed: {
+      name() {
+        return this.$store.getters.info.name
+      }
+    },
     mounted () {
       this.intervalId = setInterval(()=> this.date = new Date(), 1000)
       this.dropdown = M.Dropdown.init(this.$refs.dropdown, {
