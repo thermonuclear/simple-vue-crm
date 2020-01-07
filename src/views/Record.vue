@@ -126,7 +126,7 @@
         if (this.canCreateRecord) {
           try {
             const record = {
-              id: this.category,
+              catId: this.category,
               type: this.type,
               amount: this.amount,
               description: this.description,
