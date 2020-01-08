@@ -34,14 +34,12 @@
     data: () => ({
       loading: true,
       categories: [],
-      records: [],
     }),
     computed: {
       ...mapGetters(['info'])
     },
     async mounted() {
       const records = await this.$store.dispatch('fetchRecords')
-      this.records = records
       const categories = await this.$store.dispatch('fetchCategories')
       this.categories = categories.map(c => {
         const spend = records
