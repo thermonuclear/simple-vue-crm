@@ -21,6 +21,9 @@
   export default {
     name: 'Categories',
     components: { CategoryEdit, CategoryCreate },
+    metaInfo() {
+      return {title: this.$title('Menu_Categories')}
+    },
     data: () => ({
       categories: [],
       loading: true,

@@ -27,6 +27,9 @@ export default {
     HomeCurrency,
     HomeBill
   },
+  metaInfo() {
+    return {title: this.$title('Home_Title')}
+  },
   data: () => ({
     loading: true,
     currency: null

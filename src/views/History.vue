@@ -36,6 +36,9 @@
       HistoryTable
     },
     mixins: [paginationMixin, Pie],
+    metaInfo() {
+      return {title: this.$title('Menu_History')}
+    },
     data: () => ({
       loading: true,
       records: [],

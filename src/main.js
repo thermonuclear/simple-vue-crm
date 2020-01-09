@@ -4,9 +4,11 @@ import App from './App.vue'
 import router from './router/routes'
 import store from './store'
 import messagePlugin from './utils/message.plugin'
+import titlePlugin from './utils/title.plugin'
 import Loader from './components/app/Loader'
 import tooltipDirective from './directives/tooltip.directive'
 import Paginate from 'vuejs-paginate'
+import VueMeta from 'vue-meta'
 
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
@@ -23,6 +25,8 @@ Vue.config.productionTip = false
 
 Vue.use(Vuelidate);
 Vue.use(messagePlugin);
+Vue.use(titlePlugin);
+Vue.use(VueMeta);
 Vue.filter('date', dateFilter)
 Vue.filter('currency', currencyFilter)
 Vue.filter('localize', localizeFilter)
