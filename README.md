@@ -1,7 +1,7 @@
 # vm_vue_crm
 
 ## View project
-https://thermonuclear.github.io/simple-vue-crm/
+https://thermonuclear.github.io/simple-vue-crm/ логин sage@mail.ru pass 123456
 
 ## Project setup
 ```
