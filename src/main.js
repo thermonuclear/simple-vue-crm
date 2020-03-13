@@ -10,7 +10,6 @@ import tooltipDirective from './directives/tooltip.directive'
 import Paginate from 'vuejs-paginate'
 import VueMeta from 'vue-meta'
 
-import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
 
 import firebase from 'firebase/app'
