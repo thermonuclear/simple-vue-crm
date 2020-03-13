@@ -1,5 +1,8 @@
 # vm_vue_crm
 
+## View project
+https://thermonuclear.github.io/simple-vue-crm/
+
 ## Project setup
 ```
 npm install
